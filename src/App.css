@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  background-color: rgb(55, 55, 55);
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+select {
+  padding: 5px;
+  outline: none;
+  font-size: 1rem;
+  margin: 10px;
+  width: 20rem;
+  border-radius: 0.2rem;
+}
+
+h2 {
   color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
-.App-link {
-  color: #61dafb;
+nav h2 {
+  font-size: 2rem;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 6%;
+}
+
+.content div {
+  width: 300px;
+  height: 350px;
+  margin: 20px 15px;
+  background-color: rgb(55, 55, 55);
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav h2 {
+    font-size: 1rem;
+  }
+
+  select {
+    width: 10rem;
   }
 }
